@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- I resisted the urge to get a bootstrap template and went with the task ethos of the exercise typing all the html in from scratch-->
+    <title>Erik Smith CV in HTML</title>
+    <!--Tried to stick to just using html which I judges as the requirement of the task resisting the urge to utilise CSS & JavaScript Accordions to have drop down sections revealiong more data.-->
+    <!--I did not develop the CV for different viewing sizes as it has not yet been covered in course content and stuck to the course task-->
+
+    <style>
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            footer a {
+                margin-bottom: 10px;
+            }
+        }
+    </style> <!--I did not mean to set to scale but when I saw it did not align on mobile could not help just quickly ammending at least a litte at the end of doing the exercise
+    quickly used chat GPT and cut and paste the above CSS style to fix the footer on mobile.  Chat GPT  'how do i get my footer to align so that the email and mobile are 
+    at the left and right side of the footer when displayed on a laptop and one goes vertically below the other on a mobile using only inline html.' styleAccessed 12th December 2024 -->
+</head>
+<body>
+
+    <header style="text-align: center; font-size:x-large"><strong>Erik Smith Online CV</strong> <em>(html only)</em></header>
+    <hr> <!--I know it is customary to only have one professional photo but assuming we will elaborate on the CV when we learn css and javascrip
+     I thought I would play withe format using multiple photos to allow me to do different things with html i.e. padding etc-->
+    
+    <!-- Referenced W3 schools for nav bar structure https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_nav Accessed 11th December 2024    -->
+    <!-- had to chatGPT how to do padding on a nav using only html inline style chatGPT Accessed 11th December 2024    -->
+     <!-- had to chatGPT how to do border radius using only html inline style chatGPT Accessed 11th December 2024    -->
+      <!-- had to chat GPT Accessed 12th December "for my html page the nav bar does not align properly how can I align it so that when the page is displayed on mobile the anchors 
+       and images sit to the left below each other vertically and so that with a computer screen they sit next to each other horizintally with the larger 
+       width. below is my code" took the a tag href style from Chat GPT so the pics and nav bar line up on mobile-->
+     <nav style="background-color: beige; padding: 10px; display: flex; flex-direction:; justify-content: center; align-items: center; gap: 10px;">
+        <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; font-size: 20px; color: black;">
+          <img src="images/salzburg.jpeg" alt="Erik with a snowy backdrop" style="width: 50px; height: 80px; border-radius: 15px;">
+          Personal Biography
+        </a>
+        <a href="#education" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; font-size: 20px; color: black;">
+          <img src="images/machupichu.jpeg" alt="Erik at Machu Pichu" style="width: 50px; height: 80px; border-radius: 15px;">
+          Education & Certification
+        </a>
+        <a href="#career" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; font-size: 20px; color: black;">
+          <img src="images/presentTrinityCollege.jpeg" alt="Presenting at Trinity College" style="width: 50px; height: 80px; border-radius: 15px;">
+          Work Experience
+        </a>
+        <a href="#skills_competence" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; font-size: 20px; color: black;">
+          <img src="images/presentingwelcomeevent.jpeg" alt="Erik delivering a welcome event" style="width: 50px; height: 80px; border-radius: 15px;">
+          Skills & Competence
+        </a>
+        <a href="#contact_details" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; font-size: 20px; color: black;">
+          <img src="images/tajmajal.jpeg" alt="Erik by the Taj Majal" style="width: 50px; height: 80px; border-radius: 15px;">
+          Contact Details
+        </a>
+      </nav>
+
+
+
+        <hr>
+        <div style="border: solid 10px #e2f6f5;">
+        <h1 id="about_me" style="text-align: center;">Personal Biography</h1> <!--referenced HyperionDev HTML & Semantic HTML Accessed 12th December 2024 for anchor tags had issue with not using # for the id reference on the link-->
+        <p style="margin: 10px 2% 20px 3%;"> My expertise is in HR project management, culture change & productivity improvement. 
+            After an international talent exchange on healthcare innovation, I developed an interest in technology's 
+            potential for solutions. In my latest role integrating global acquisitions of tech firms for Access, my 
+            interest grew into a passion. I began self-learning coding on platforms like W3Schools. Committed to 
+            transitioning to a Junior Software Developer, I left a well-paid senior role to before to complete a 
+            12-week AI Software Development Bootcamp, improving skills in HTML, CSS, JavaScript, Python & MySQL. 
+            With my own live website I enhance my coding skills daily. Combined with my enthusiasm for coding I 
+            bring 15+ years in HR, with skills building trusted relationships with senior stakeholders i.e. CEOs & Directors. 
+            I bring transferable skills to help me excel in your role from delivering engaging presentations to 
+            large audiences in multiple languages, leading diverse teams to driving constant improvement. Beyond 
+            this I bring a passion & enthusiasm for coding seeking a career I enjoy.<br>
+        
+            <p style="text-align: center;">Nationality: Dual National with UK & Irish Passport allowing right to work in UK & Europe</p>
+            
+            <p style="text-align: center;">Languages: Native English; Fluent Spanish; Beginner French, Portuguese & Hindi</p>
+        </p>
+        </div>
+        <hr>
+
+        <!-- Had to reference W3 schools to remind myself of how to use float with inline styling on html-->
+         <!-- Had to ask chat GPT how to center bullet points for list-style-position-->
+           <!-- Only using inline style with html can you correct why these two divs are not aligning slightly 
+            with one appearing higher than the other-->
+          <!-- I had real difficulty getting the two divs to sit correctly on the page with the boxes slightly 
+          misalligned on height and one sitting slightly higher than the other had to chatGPT which basically changed 
+          the way I had my margins from margin-left to listing them all margin: 10px 2% 0 3%;-->
+          
+        <div style="margin: 1%">
+          <div style="width: 45%; height: 20%; margin: 10px 2% 10px 3%; display: inline-block; background-color: beige; vertical-align: top; padding: 5% 0 5% 0;">
+            <h2 id="education" style="margin: 15px; text-align: center;">Qualifications</h2>
+            <ul style="list-style-position: inside; text-align: center; font-size: large; margin: 0; padding: 0;">
+                <li>Masters in Human Resources Management - Middlesex University - 2009</li>
+                <li>Bachelors in English Language & Literature - Edge Hill University - 2005</li>
+                <li>Chartered Member of the CIPD - CIPD - 2012</li>
+                <li>PRINCE2 Project Management - People Cert - 2020</li>
+                <li>Agile International Project Management - People Cert - 2020</li>
+            </ul>
+        </div>
+        
+        <div style="width: 45%; height: 20%; margin: 10px 0 10px 2%; display: inline-block; background-color: beige; vertical-align: top; padding: 5% 0 5% 0">
+            <h2 style="margin: 15px; text-align: center;">Certifications</h2> <!--Changed to h2 to align on mobile screen - could not help it as was annoying me-->
+            <ul style="list-style-position: inside; text-align: center; font-size: large; margin: 0; padding: 0;">
+                <li>AI Software Engineering Bootcamp - Skills City (free Gov course provider) - Sep 2024</li>
+                <li>HTML Professional Level certificate - W3 schools - Oct 2023</li>
+                <li>CSS advanced certificate - W3 schools - Oct 2023</li>
+                <li>JavaScript advanced certificate - W3 schools - Oct 2023</li>
+                <li>SQL advanced certificate - W3 schools - Nov 2023</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+    </div>
+        <hr>
+
+
+        <div style="border: solid 10px #e2f6f5;">
+            <h1 id="career" style="text-align: center;">Career History</h1>
+
+            <ol style="padding: 0 2% 0 5%">
+                     <li><strong>01/2023 - 02/2024: M&A Integration Partner / Lead at Access Group: </strong> Reporting to the Head of M&A delivering 
+                        acquisitions across global locations (EMEA/APAC) & diverse sectors, including Payments, Hospitality & NPE. 
+                        Executed restructuring including director/ founder exit agreements, service redeployment from India to Romania 
+                        or staff redundancy i.e. retrenchment in Singapore. Influencing Directors & Founders from due diligence to 
+                        planning integration, harmonising contracts & benefits. presenting at welcome events to identification & 
+                        engagement of key talent i.e. structuring reward with a retention bonus.<br><br>
+
+                <strong>Success:</strong>  £45million extra revenue via acquisitions with 500+ extra staff & improved staff Net Promoter Scores (NPS).</li><br>
+
+                    <li><strong>09/2021 - 01/2022: M&A HR Project Manager Fixed term contract with AstonLark</strong>: Reports to HR Director developed 
+                        integration process for high volume of small acquisitions. Installed project management principles i.e. timeline 
+                        reporting, & risk assessment identifying issues in Due Diligence leading to better risk management of issues & 
+                        faster integration timeframes.<br><br>
+
+                <strong>Success:</strong> Implemented Project Management principles i.e MoSCoW prioritisation to integrate 24 acquisitions.</li><br>
+
+                    <li><strong>04/2021 – 09/2021: Senior HR Business Partner at BEH Trust: </strong> Supporting services with 1200 staff reporting to 
+                        board directors. Line managing HR Business Partners. Leading the HR strategy, modernising workforce information 
+                        to redesigning the workforce with apprenticeships & devising initiatives leading to improved staff Net Promoter 
+                        Scores (NPS).<br><br>
+
+                <strong>Success:</strong> Solved workforce gaps skill-mixing with apprentices/volunteers & improved NPS reducing turnover & absence.</li><br>
+
+                    <li><strong>03/2013 – 04/2021: HR Business Partner at CNWL Trust:</strong> Changing areas of responsibility for areas of 1000 + staff 
+                        reporting to boards of directors. Devised HR Strategy on behalf of the HR Director for organisation of 9000 staff 
+                        covering elements of vacant Deputy Director role. Led workforce planning working with external agencies, oversaw 
+                        legal teams at employment tribunals to conducting organisational restructuring at pace i.e. responding to Covid. 
+                        Line managed Junior HR Partners.<br><br>
+
+                <strong>Success:</strong> Delivered strategy taking CNWL from 4000 to 9000 staff & annual turnover from £300mil to £700mil (approx).</li><br>
+
+                    <li> <strong>09/2010 - 03/2013: HR Business Partner: Northampton Hospital: </strong> Accountable HR person for 1200 staff & reporting to 
+                        board of directors overseeing all elements of HR as Business Partner including delivering cost improvements through 
+                        organisational change with redundancy.  Managing national strikes as well as local processes of Disciplinary Grievance 
+                        ill Health including dismissal. Providing business solutions i.e. introducing annualised hours for staff to meet fluctuating 
+                        service demand. Improving recruitment using data to identifying blockages reducing time to recruit & candidate experience. <br><br>
+
+                <strong>Success: </strong> Delivered £2million in cost reduction facilitating process mapping & service redesign.</li><br>
+
+                    <li><strong>09/2009 - 09/2010: HR Business Partner: Wirral PCT: </strong> HR lead for 1200 staff incorporating all elements of HR. Lead on 
+                        performance improvement utilising workforce metrics increasing community patient contacts. Introduced talent management 
+                        system with forced rankings related to patient contact data along with league table enhancing & standardising performance<br><br>
+
+                <strong>Success:</strong> Facilitated system redesign helping business meet key performance KPIs around patient pathway access.</li><br>
+
+                    <li><strong>09/2007- 08/2009: Graduate Management Trainee, NHS Graduate Scheme: </strong> Placements in various roles as part of scheme.
+                        <ul style="margin-left: 50%;">	
+                               <li> 12/2008 - 09/2009: HR Business Partner: Wirral PCT:</li> 											
+                               <li> 09/2008 -12/2008: Exec Talent Project Manager Leadership Academy </li>
+                               <li> 03/2007 - 08/2008: HR Advisor: Wigan Wrightington & Leigh (WWL) Hospitals </li>
+                               <li> 09/2007 - 02/2008: Training & Development Officer: WWL Trust, Part time 2 days </li>
+                               <li> 09/2007 - 02/2008: Recruitment Team Leader: WWL Part time 3 days </li>
+                         </ul>	
+
+        </ol>
+        </div>
+
+        <div style="border: solid 10px #e2f6f5;">
+            <h1 style="text-align: center;">Secondment</h1>
+            <p style="margin: 10px 2% 20px 3%;"> 
+                CNWL to HOPE Euro Exchange Program: May 2017 - Jun 2017 Accountable to National Program Coordinator living in
+                Spain critiquing innovation presenting feedback in Spanish to regional & national executives. Managing organisational &
+                cultural politics, analysing strategic policy impact i.e. assessing workforce incorporated Artificial Intelligence (AI) from
+                automated robots carrying out surveillance or bringing drugs to machine learning & chat-bots providing companionship via AI.
+                Reviewing big-data analytics on forecasting future events, technology enabled data-driven performance analysis via workforce
+                GPS tracking in work planning. Presented insight to an international audience of 500+ in Dublin Trinity college on Innovation
+                collaborating internationally in matrix teams delivering reports as part of European Strategy
+            </p>
+            </div>
+            <hr>
+
+        <div style="display: flex; justify-content: space-between; margin: 10px 0; background-color: white">
+        <div style="width: 45%; margin: 10px 0 10px 1%; display: inline-block; background-color: beige; ">
+            <h1 style="text-align: center;">Experience & Competence:</h1>
+            <p style="margin: 10px 0.5% 20px 3%;"> <!--Normally I would include either Experience & competence on a HR CV or Skills for s software related role
+                I placed both here as I think I need to blend them both as my current software CV loses all the amzing things I have don. WOULD APPRECIATE HELP 
+                FROM THE CAREERS TEAM ON HOW BEST TO BLEND THEM BOTH TO FOCUS ON A SOFTWARE ROLE BUT REFLECT SKILLS FROM PAST ROLES I BRING-->
+
+                <!-- NOTE FOR FUTURE I PLAN TO DO Boxes or an accordian drop down menu with just the skill title and then a drop down feature or box 
+                 opening etc for an online CV-->
+                
+                    <strong>Working Globally:</strong> Led matrix teams into new geographies gaining understanding of legal frameworks customs & practice from
+                    differing legal frameworks on benefits in Australia & New Zealand i.e, holiday carry over to retrenchment in Singapore advising
+                    on Visa implications of redundancy in Dubai or terminating contractors in India. Recruited to Go-centres in Romania & Malaysia
+                    managed remote working in Greece. Presented welcome events in Spanish & devised company playbooks for Spain on
+                    Reward practices, harmonising contracts & understanding local customs i.e. contracts at will in USA & integration implications.<br><br>
+                    
+                   <strong>Managing Conflict to Resolution:</strong> Calculated & conveyed value of benefits total reward package including equity for leaders
+                    facilitating contract migration, negotiated change of controversial role titles i.e. ‘founders’, ‘directors’ & ‘heads of’ job mapped
+                    into business structure to communicating policy buy outs of acquired employees enhanced terms & conditions.<br><br>
+                    
+                   <strong>M&A Thinks & Acts Commercially:</strong> Realised deal synergies via effective due diligence & discovery processes harmonising
+                    benefits / terms & conditions, retaining key talent enabling improved sales with staff engagement whilst managing senior exits.<br><br>
+                   
+                    <strong>Organisational Development & Design:</strong> Redesigned services facilitating job mapping reviewing skill mix with managers using
+                    LEAN increasing productivity repeatedly delivering savings of £1-2million redesigning or closing services with employee exits.<br><br>
+                    
+                    <strong>Staff Engagement: </strong> Devised Engagement & Wellbeing Strategy linked to Staff Survey KPIs. Reduced staff stress measured by
+                    HSE indicators incorporated into Appraisal. Facilitated Employee Voice with Board to floor visits & discussion forums.<br><br>
+                    
+                    <strong>HR Strategy Design: </strong> Led service acquisitions strategy increasing revenue by £500million delivering growth from 3500 to 9000
+                    staff. For areas of 9000 staff designed the People Strategy for HRD to meet operational needs & covered Deputy Director of HR
+                    role. Devised strategies for Reward, Talent Management, Workforce Planning, Resourcing ER & IR writing aligned HR policies.<br><br>
+                    
+                    <strong>Implementing Culture & Values: </strong> In a quarter advised on 3 dismissals, 3 final warnings (2 with pay reduction) & 3 First written
+                    warnings with no ET1. Installed learning culture disseminating themes reducing disciplinary by preventing reoccurrence.<br><br>
+                    
+                    <strong>Partnership Working; Performance Improvement: </strong> Introduced forced staff rating & accountability discussion with managers
+                    identifying staff not meeting KPIs. Improved performance reducing incidents or rota overspend & delivered revenue targets.<br><br>
+                    
+                    <strong>HR Effectiveness: Employee Relations: </strong> Managed complex Employee Relations from Disciplinary involving police &
+                    safeguarding to Grievances or Sickness at all stages. Conducted mediation & disciplinary investigations to dismissal
+                    successfully resolving tribunals or ET1s including adding complexity of multiple respondent case during acquisition.<br><br>
+                    
+                    <strong>Consumer Focus: </strong> Negotiated with unions & work councils preventing strikes i.e. staff redundancy or terminating & re-engaging
+                    staff when moving services from 9-5 working to 24 hour 7 days a week to better meet the needs of the customers.<br><br>
+                    
+                    <strong>Handling Complex & Difficult Situations With Thought & Confidence: </strong> Managed budget of £480k delivering a Talent
+                    Management Aspiring CEO Leadership Program. Resolved complex & sensitive situation of 64 CEOs managing conflicting
+                    viewpoints with BAME community groups maintaining joint investment required from both stakeholder groups.<br><br>
+                    
+                    <strong>Track Record of Making Change Happen: </strong> Utilised Apprentice Levy to lead strategic project managing the development of
+                    Apprentice Leadership programs identifying potential & enhancing skill i.e. delivering training, career maps, action learning &
+                    mentors with stretch projects. Combined it with volunteer program to enable talent flow & enhance workforce capacity.<br><br>
+                    
+                    <strong>Talent Management: </strong> Devised senior acquired talent management program for acquired leaders CEOs & Directors setting up
+                    bonus & reward packages, leadership training, career maps, action learning, buddy programs, mentors & stretch projects.<br><br>
+                    
+                    <strong>Data Analytics, Influencing & Collaborating: </strong> Utilised data on reduced EU workforce numbers entering the UK since Brexit,
+                    influencing the CEO to initiate an International Talent Management Exchange Program.<br><br>
+       
+                </p>
+            </div>
+            <hr>
+
+            <!--Had a problem getting both these divs to align inline issue was to with break lines in the div effecting it. Solved the solution by 
+            putting another div around both these divs.Got solution via ChatGPT Accessed 12th December 'I want the first picture to have the divs lined 
+            up side by side like in the second picture - what is wrong with my code as to why this is not happening'-->
+
+
+        <div style="width: 46%; margin: 10px 2% 10px 0%; display: inline-block; background-color: beige;">
+            <h1 id="skills_competence" style="text-align: center;">Skills</h1>
+            <p style="margin: 10px 2% 20px 0.5%; padding-right: 1%; padding-left: 1%;"> 
+                <strong>Front-end Development:</strong> Proficient in HTML, CSS styling utilising Bootstrap & JavaScript functionality, creating &
+                maintaining interactive visually appealing websites with Bootcamp & private learning equating to 1 years experience.<br><br>
+                
+                <strong> Web Optimisation:</strong> Experience of reviewing websites to improve performance & user experience, including reducing load
+                times, ensuring cross-platform compatibility and implementing best practices for web design.<br><br>
+                
+                <strong>Problem Solving & Debugging:</strong> Adept at testing and debugging code to ensure functionality and compatibility across 
+                different browsers and devices collaborating in teams with version control when merging work.<br><br>
+                
+                <strong>SDLC:</strong> Understanding of Software Development Life Cycle, planning, analysis, design implementation testing & 
+                maintenance. Planning with tools like Jira, understanding different roles to devising algorithms / flow diagrams & writing Pseudocode.<br><br>
+                
+                <strong>Responsive Design:</strong> Competent in designing & implementing intuitive responsive user interfaces, focusing on element layout,
+                colour selection & navigation management to enhance usability as well as accessibility.<br><br>
+                
+                <strong> Management:</strong> Introduced project management principles such as MoSCoW prioritisation, quality control, risk
+                management and documentation control in both HR and technical projects on my bootcamp client team project.<br><br>
+                
+                <strong> Python: </strong>Developed understanding in Python of Declaring & Initialising Variables, Data Types, Functions, Keywords,
+                 Libraries, Commenting, Conditional Statements, Loops, Logical Operators, Version Control, Lists, Tuples, Dictionaries & Data Collection.<br><br>
+                
+                <strong>JavaScript: </strong> Embedding scripts to HTML, manipulating the Document Object Model, working with variables, data types, operators & 
+                loops. Utilising switch statements, defining functions with parameters & calling them with arguments, creating and working with objects and their 
+                methods, handling dates and times, working with arrays & managing event handling.<br><br>
+                
+                <strong>Backend Languages:</strong> Knowledge of backend programming languages i.e. Python & JavaScript with understanding of 
+                Object-Oriented Programming principles, including classes, objects, methods, inheritance, encapsulation & use of getters/setters.<br><br>
+                
+                <strong>Databases:</strong> Designing Entity Relationship (ER) diagrams & managing databases with CRUD operations. Understanding of 
+                fundamental SQL commands i.e. <span style="text-transform: uppercase;"> Select, Update, Create Database, Create Table, Order By, Min, Max, Count,</span> & others. Skilled in optimising 
+                queries, ensuring efficient data retrieval & manipulation.<br><br> 
+                <!-- Used stack overflow for variety even though W3 schools was easier for referencing text transform 
+                 https://stackoverflow.com/questions/49946057/how-to-create-uppercase-in-pure-html-->
+                
+                <strong>Technical Collaboration:</strong> Worked closely with teams to resolve technical issues, implement improvements, & develop
+                advanced features. Participated in designing and refining user interfaces to meet user needs.<br><br>
+                
+                <strong>Continuous Learning:</strong> Completed a 12-week AI Software Development Bootcamp, continually enhancing skills via industry
+                events, training courses and e-learning platforms. Supported by a mentor to ensure professional growth.<br><br>
+                
+                <strong>Cloud Platforms:</strong> Familiarity with cloud services like AWS, Azure & key concepts storage databases & deployment. Knowledge of  
+                Continuous Integration & Continuous Deployment pipelines using cloud services.Frameworks & Technologies: Competent with front-end frameworks 
+                like Bootstrap & server-side development with Node.js. Experience linking server & client-side components through network requests via 
+                Fetch API directly from web browsers.<br><br>
+                
+                <strong>Maintaining Code:</strong> Working as part of a project team developing & testing code utilising GitHub to version control code
+                repositories pushing & pulling down code from GitHub branches.<br><br>
+                
+                <strong>Security: </strong> Awareness of common security vulnerabilities, SQL injection, sensitive data exposure &  broken authentication along 
+                    with best practices such as data encryption &  secure coding practices i.e. principle of least privilege.<br><br>
+
+                <strong>Machine Learning:</strong> Developed of AI supervised/unsupervised machine learning, labelled / unlabelled data, regression & classification. 
+                Built a Python-based chatbot with learning capabilities, enhancing understanding of machine learning concepts.
+                </p>
+            </div>
+            </div>
+            <hr>
+
+            <div style="border: solid 10px #e2f6f5;">
+                <h1 style="text-align: center;">Skills City: AI Software Development BootCamp</h1>
+                <p style="margin: 10px 2% 20px 3%;"> 
+                    The 12-week bootcamp equipped me with skills in front-end web development, including
+                    HTML, CSS, & JavaScript, while collaborating on technical projects like creating a CRM, enhancing problem-solving &
+                    teamwork. I gained experience in dynamic web features using JavaScript frameworks such as Node.js, jQuery & Angular,
+                    contributing to developing an AI chatbot for the CRM. I supported prototype design for intuitive, responsive interfaces, focusing
+                    on layout & navigation. The bootcamp project involved optimising websites, reducing load times & ensuring cross-platform
+                    compatibility. I also developed skills in testing, debugging along with back-end programming using Python as well as
+                    JavaScript & databases with MySQL. Throughout the bootcamp, I engaged in continuous learning with weekly assignments &
+                    self learning via platforms like LeetCode & improved competence collaborating on code in a virtual environment.
+                </p>
+                </div>
+                <hr>
+
+          
+            <div id="contact_details" style="border: solid 10px #e2f6f5; margin-top: 0%;">
+                <h1  style="text-align: center;">Contact Details</h1>
+                <p style="margin: 10px 2% 20px 3%;"> 
+                
+                    <ol style="list-style-position: inside; text-align: center;">
+                        <h2><li><a href="https://uk.linkedin.com/in/erik-smith-ba-ma-mcipd">linkedin</a></li></h2>
+                        <h2><li><a href="https://github.com/eriksmith2024">GitHub</a></li></h2>
+                        <h2><li><a href="http://eriksmith.great-site.net/homepage.html">Mywebsite</a></li></h2>
+                    </ol>
+
+                <!-- chatGPT how to seperate an anchor email and mobile to align bottom left and bottom right in a footer with just html
+                majority of style line from display to flex-end typed in from chat GPT query-->
+         
+                    <footer style="background-color: beige; display: flex; justify-content: space-between; align-items: flex-end; padding: 2% 10px; margin-bottom: 0;">
+                        <a href="mailto:eriksmith.career@hotmail.com" style="font-size: x-large;">email: eriksmith.career@hotmail.com</a>
+                        <a href="tel:8671024337" style="font-size: x-large;">mobile: 07730786245</a>
+                    </footer>
+            
+                    
+            </p>
+            </div>
+            <hr>
+
+</body>
+</html>
